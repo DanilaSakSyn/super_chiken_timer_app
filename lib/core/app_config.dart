@@ -3,13 +3,14 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 
 class AppConfig {
-  static const String appsFlyerDevKey = 'ZxzZYPbN93maktCtrRZtw8';
-  static const String appsFlyerAppId = '6755145892'; // Для iOS'
-  static const String bundleId = 'com.cash-nemotion.nemotion-cash'; // Для iOS'
+  static const String appsFlyerDevKey = '88LtKkieqwN6Ad7tSKvqPX';
+  static const String appsFlyerAppId = '6748400024'; // Для iOS'
+  static const String bundleId = 'com.lditdifgjulx.fypbrrzgsvnf'; // Для iOS'
   static const String locale = 'en'; // Для iOS'
   static const String os = 'iOS'; // Для iOS'
-  static const String endpoint = 'https://cashnemotion.com'; // Для iOS'
-  static const String firebaseProjectId = 'cash--n--emotion'; // Для iOS'
+  static const String endpoint = 'https://superchickentimer.com'; // Для iOS'
+  static const String firebaseProjectId =
+      'super-chicken-timer-b9e58'; // Для iOS'
 
   //UI Settings
   // Splash Screen

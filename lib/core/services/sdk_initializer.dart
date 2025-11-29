@@ -3,7 +3,7 @@ import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:appsflyer_sdk/appsflyer_sdk.dart';
 import 'package:flutter/services.dart';
 import 'package:superchickentimerflutter/firebase_options.dart';
-import 'package:superchickentimerflutter/super_chicken_timer_app.dart';
+import 'package:superchickentimerflutter/screens/super_chicken_timer_app.dart';
 import '../app_config.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
