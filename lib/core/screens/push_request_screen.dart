@@ -44,8 +44,9 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
 
     return Scaffold(
       body: Container(
-        decoration:
-            const BoxDecoration(gradient: AppConfig.pushRequestGradient),
+        decoration: const BoxDecoration(
+          gradient: AppConfig.pushRequestGradient,
+        ),
         child: LayoutBuilder(
           builder: (context, constraints) {
             return Column(
@@ -60,9 +61,7 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                       width: isLandscape ? 200 : 250,
                       height: isLandscape ? 160 : 250,
                       child: const Image(
-                        image: AssetImage(
-                          AppConfig.pushRequestLogoPath,
-                        ),
+                        image: AssetImage(AppConfig.pushRequestLogoPath),
                       ),
                     ),
                   ),
@@ -72,7 +71,9 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                 Expanded(
                   flex: isLandscape ? 3 : 2,
                   child: Container(
-                    decoration: AppConfig.pushRequestDecoration,
+                    decoration: BoxDecoration(
+                      gradient: AppConfig.pushRequestFadeGradient,
+                    ),
                     padding: EdgeInsets.symmetric(
                       horizontal: isLandscape ? 60 : 30,
                       vertical: 20,
@@ -139,9 +140,10 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                             child: Text(
                               'Yes, I Want Bonuses!',
                               style: TextStyle(
-                                  fontSize: isLandscape ? 18 : 16,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppConfig.yesButtonTextColor),
+                                fontSize: isLandscape ? 18 : 16,
+                                fontWeight: FontWeight.w600,
+                                color: AppConfig.yesButtonTextColor,
+                              ),
                             ),
                           ),
                         ),

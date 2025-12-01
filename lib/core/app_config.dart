@@ -34,8 +34,8 @@ class AppConfig {
   );
 
   static const Gradient pushRequestGradient = LinearGradient(
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
     colors: [Color(0xFF4F5D81), Color(0xFF050E4D)],
   );
   static const Gradient pushRequestFadeGradient = LinearGradient(
