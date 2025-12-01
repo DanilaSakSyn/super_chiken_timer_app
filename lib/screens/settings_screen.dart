@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../services/theme_service.dart';
 import '../services/locale_service.dart';
 import '../l10n/app_localizations.dart';
@@ -123,13 +124,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     children: [
                       _buildInfoTile(
                         title: loc.settingsVersion,
-                        subtitle: '1.0.2',
+                        subtitle: '2.0.3',
                         icon: Icons.app_settings_alt,
                       ),
                       _buildInfoTile(
                         title: loc.settingsDeveloper,
                         subtitle: loc.settingsTeam,
                         icon: Icons.person,
+                      ),
+                      _buildActionTile(
+                        title: 'Privacy Policy',
+                        subtitle: 'View our privacy policy',
+                        icon: Icons.privacy_tip,
+                        onTap: () => _openPrivacyPolicy(),
                       ),
                     ],
                   ),
@@ -140,6 +147,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
       ),
     );
+  }
+
+  Future<void> _openPrivacyPolicy() async {
+    final url = Uri.parse('https://superchickentimer.com/privacy-policy.html');
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Could not open privacy policy')),
+        );
+      }
+    }
   }
 
   Widget _buildThemeSelector(ThemeService themeService, AppLocalizations loc) {
@@ -367,6 +387,47 @@ class _SettingsScreenState extends State<SettingsScreen> {
             color: theme.textTheme.bodyMedium?.color ?? Colors.grey[600],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildActionTile({
+    required String title,
+    required String subtitle,
+    required IconData icon,
+    required VoidCallback onTap,
+  }) {
+    final theme = Theme.of(context);
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      child: ListTile(
+        contentPadding: EdgeInsets.zero,
+        leading: Icon(
+          icon,
+          color: theme.textTheme.bodyMedium?.color ?? Colors.grey[600],
+          size: 20,
+        ),
+        title: Text(
+          title,
+          style: GoogleFonts.poppins(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: theme.textTheme.bodyLarge?.color ?? Colors.black87,
+          ),
+        ),
+        subtitle: Text(
+          subtitle,
+          style: GoogleFonts.poppins(
+            fontSize: 14,
+            color: theme.textTheme.bodyMedium?.color ?? Colors.grey[600],
+          ),
+        ),
+        trailing: Icon(
+          Icons.open_in_new,
+          color: theme.textTheme.bodyMedium?.color ?? Colors.grey[600],
+          size: 20,
+        ),
+        onTap: onTap,
       ),
     );
   }
