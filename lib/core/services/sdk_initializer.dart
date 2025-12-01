@@ -1,8 +1,6 @@
 import 'dart:io' show Platform;
-import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:appsflyer_sdk/appsflyer_sdk.dart';
 import 'package:flutter/services.dart';
-import 'package:superchickentimerflutter/screens/chicken_timer_screen.dart';
 import 'package:superchickentimerflutter/screens/super_chicken_timer_app.dart';
 import '../../firebase_options.dart';
 import '../app_config.dart';
@@ -207,7 +205,7 @@ class SdkInitializer {
       MapEntry("bundle_id", AppConfig.bundleId),
       MapEntry("locale", AppConfig.locale),
       MapEntry("os", AppConfig.os),
-      MapEntry("firebase_project_id", AppConfig.firebaseProjectId),
+      MapEntry("firebase_project_id", DefaultFirebaseOptions.ios.projectId),
     ]);
 
     if (apnsToken != null) {
