@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'core/services/firebase_messaging_service.dart';
 import 'core/services/sdk_initializer.dart';
 import 'firebase_options.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,6 +19,9 @@ void main() async {
   var isOrganic = SdkInitializer.getValue("Organic");
   print('add af2 $isFirstStart $isOrganic');
   if (isFirstStart) SdkInitializer.initAppsFlyer();
+  if (!isFirstStart && !isOrganic) {
+    FirebaseMessagingService.InitPushAndGetToken();
+  }
 
   runApp(const App());
 }

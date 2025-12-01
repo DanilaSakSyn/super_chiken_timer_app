@@ -11,6 +11,9 @@
 		0DB7C0DF2EDC4D8400446726 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB7C0DE2EDC4D8400446726 /* FirebaseCore.framework */; };
 		0DB7C0E32EDC4D8700446726 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB7C0E22EDC4D8700446726 /* FirebaseMessaging.framework */; };
 		0DB7C0E62EDC4D8C00446726 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB7C0E52EDC4D8C00446726 /* UserNotifications.framework */; };
+		0DB7C0F72EDDB9B800446726 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB7C0F62EDDB9B800446726 /* FirebaseMessaging.framework */; };
+		0DB7C0FA2EDDB9C200446726 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB7C0F92EDDB9C200446726 /* FirebaseCore.framework */; };
+		0DB7C0FC2EDDB9C700446726 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB7C0E52EDC4D8C00446726 /* UserNotifications.framework */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
@@ -54,16 +57,6 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +65,8 @@
 		0DB7C0DE2EDC4D8400446726 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DB7C0E22EDC4D8700446726 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DB7C0E52EDC4D8C00446726 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		0DB7C0F62EDDB9B800446726 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DB7C0F92EDDB9C200446726 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		234D8BF809746D049DABB9C0 /* Pods-notifications.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notifications.profile.xcconfig"; path = "Target Support Files/Pods-notifications/Pods-notifications.profile.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +143,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB7C0FC2EDDB9C700446726 /* UserNotifications.framework in Frameworks */,
+				0DB7C0F72EDDB9B800446726 /* FirebaseMessaging.framework in Frameworks */,
 				A2F662830F39784453BB1DF0 /* Pods_Runner.framework in Frameworks */,
+				0DB7C0FA2EDDB9C200446726 /* FirebaseCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +232,8 @@
 		ED6F200FD2B4B7896F6A2583 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DB7C0F92EDDB9C200446726 /* FirebaseCore.framework */,
+				0DB7C0F62EDDB9B800446726 /* FirebaseMessaging.framework */,
 				0DB7C0E52EDC4D8C00446726 /* UserNotifications.framework */,
 				0DB7C0E22EDC4D8700446726 /* FirebaseMessaging.framework */,
 				0DB7C0DE2EDC4D8400446726 /* FirebaseCore.framework */,
@@ -296,7 +296,6 @@
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
-				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				0DB7C0932EDA610500446726 /* Embed Foundation Extensions */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				D89A167AF09A95FD291124A4 /* [CP] Embed Pods Frameworks */,
