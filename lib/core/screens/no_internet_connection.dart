@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 
-import '../app_config.dart';
+import 'package:superchickentimerflutter/core/app_config.dart';
 
 class NoInternetConnectionScreen extends StatelessWidget {
   const NoInternetConnectionScreen({super.key});
